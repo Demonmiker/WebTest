@@ -12,7 +12,7 @@ function btnsolve()
 {
     out2 = document.getElementById("out2");
     txt = document.getElementById("txt3").value;
-    if (/^[0123456789+*()./]/.test(txt)) {
+    if (/^[0123456789+*()./]/.test(txt) || document.getElementById("chb").checked) {
         out2.innerHTML = eval(document.getElementById("txt3").value);
     }
    
