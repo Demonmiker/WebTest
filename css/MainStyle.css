@@ -4,6 +4,17 @@
 	color:red
 }
 
-.text{
-	font-size:4vw;
+
+
+@media(  max-width:930px)
+{
+	.text {
+		font-size: 8vw;
+	}
+}
+
+@media( min-width:931px) {
+	.text {
+		font-size: 2vw;
+	}
 }
