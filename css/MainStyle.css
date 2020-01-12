@@ -6,15 +6,17 @@
 
 
 
-@media(  max-width:930px)
-{
-	.text {
-		font-size: 8vw;
-	}
-}
 
-@media( min-width:931px) {
+
+@media all and (orientation:landscape) {
 	.text {
 		font-size: 2vw;
 	}
 }
+
+@media all and (orientation:portrait) {
+	.text {
+		font-size: 4vw;
+	}
+}
+	
