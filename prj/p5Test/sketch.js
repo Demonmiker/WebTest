@@ -8,7 +8,7 @@ function setup() {
     
     background(0); //черный фон
     noStroke(); // убираю оконтовку у кругов
-    colors = [color('red'), color('magenta'),color('lime'),color('blue'),color('purple'),color('yellow')]
+    colors = [color('red'), color('magenta'), color('lime'), color('SlateBlue'), color('Orchid'), color('yellow'), color('CornflowerBlue'), color('orange'), color('GreenYellow'), color('LightSeaGreen '), color('Plum')]
 }
 
 particles = [];
