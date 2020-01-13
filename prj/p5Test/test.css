@@ -13,3 +13,22 @@
 {
 	background-color: red;
 }
+
+.flex-col {
+	/*генерирует flex-контейнер уровня блока*/
+	display: flex;
+	flex-direction: column;
+	width: 20%;
+}
+
+.flex-row {
+	/*генерирует flex-контейнер уровня блока*/
+	display: flex;
+	flex-direction: row;
+}
+
+
+.track-value{
+	align-self: center;
+	font-size: 2vw;
+}
