@@ -55,6 +55,7 @@
 
 .button {
 	width:90%;
+	height:90%;
 	background-color: DarkSlateBlue; /* Green */
 	border: none;
 	color: white;
@@ -63,6 +64,15 @@
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
+}
+
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none; /* Override default look */
+	appearance: none;
+	width: 25px; /* Set a specific slider handle width */
+	height: 25px; /* Slider handle height */
+	background: #4CAF50; /* Green background */
+	cursor: pointer; /* Cursor on hover */
 }
 
 

@@ -3,7 +3,7 @@ var cns;
 function setup() {
     tr_var_changed();
     w = windowWidth - 10;
-    h = windowHeight - 150;
+    h = windowHeight - 170;
     cns = createCanvas(w, h);
     cns.parent('canvas_holder')
     
