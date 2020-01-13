@@ -44,6 +44,7 @@ function draw() //всё что дальше происходит каждый кадр
 var tr_par;
 var tr_par2;
 var tr_par3;
+var ch1;
 function tr_var_changed() {
     tr_par = document.getElementById("tr_par").value;
     document.getElementById("track").value = tr_par;
@@ -51,6 +52,8 @@ function tr_var_changed() {
     document.getElementById("track2").value = tr_par2;
     tr_par3 = document.getElementById("tr_par3").value;
     document.getElementById("track3").value = tr_par3;
+
+    ch1 = document.getElementById("ch1").checked;
 }
 
 
@@ -60,15 +63,27 @@ class Particle {
         this.clr = colors[Math.floor(Math.random() * colors.length)];
         this.x = x;
         this.y = y;
-        var v = p5.Vector.random2D();
-        v.setMag(Math.random() * 5);
-        this.vx = v.x;
-        this.vy = v.y;
-        this.ax = 0;
-        this.ay = 0; 
+        if (ch1) {
+            let rnd = random(-1, 1);
+            let rn = rnd / Math.abs(rnd);
+            this.vx = (3 * rn) + random(-0.1,0.1);
+            this.vy = -1.5 + random(-0.2, 0.1);
+            this.ax = -0.04 * rn
+            this.ay = 0;
+        }
+        else {
+            var v = p5.Vector.random2D();
+            v.setMag(Math.random() * 5);
+            this.vx = v.x;
+            this.vy = v.y;
+            this.ax = 0;
+            this.ay = 0; 
+        }
+       
     }
 
     show() {
+        noStroke();
         fill(this.clr);
         ellipse(this.x, this.y, 7, 7);
     }
