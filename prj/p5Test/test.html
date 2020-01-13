@@ -14,12 +14,19 @@
     <span class="flex-row">
         <output id="out" class="track-value" style="width:100px"></output>
         <span class="flex-col">
+            <p class="track-value">Колво за клик</p>
             <input type="range" min="1" max="5" step="1" id="tr_par" value="1" onchange="tr_var_changed()" />
             <output id="track" class="track-value" style="align-self: center">NaN</output>
         </span>
         <span class="flex-col">
+            <p class="track-value">Хвостики</p>
             <input type="range" min="0" max="255" step="1" id="tr_par2" value="10" onchange="tr_var_changed()" />
             <output id="track2" class="track-value" style="align-self: center">NaN</output>
+        </span>
+        <span class="flex-col">
+            <p class="track-value">Гравитация</p>
+            <input type="range" min="0" max="0.2" step="0.01" id="tr_par3" value="0.05" onchange="tr_var_changed()" />
+            <output id="track3" class="track-value" style="align-self: center">NaN</output>
         </span>
     </span>
 </body>

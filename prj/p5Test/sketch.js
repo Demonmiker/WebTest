@@ -43,11 +43,14 @@ function draw() //всё что дальше происходит каждый кадр
 
 var tr_par;
 var tr_par2;
+var tr_par3;
 function tr_var_changed() {
     tr_par = document.getElementById("tr_par").value;
     document.getElementById("track").value = tr_par;
     tr_par2 = document.getElementById("tr_par2").value;
     document.getElementById("track2").value = tr_par2;
+    tr_par3 = document.getElementById("tr_par3").value;
+    document.getElementById("track3").value = tr_par3;
 }
 
 
@@ -62,7 +65,7 @@ class Particle {
         this.vx = v.x;
         this.vy = v.y;
         this.ax = 0;
-        this.ay = 0.05;
+        this.ay = 0; 
     }
 
     show() {
@@ -72,7 +75,7 @@ class Particle {
 
     update() {
         this.vx += this.ax;
-        this.vy += this.ay;
+        this.vy += this.ay + parseFloat(tr_par3);
         this.x += this.vx;
         this.y += this.vy;
     }
