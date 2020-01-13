@@ -1,13 +1,14 @@
 // JavaScript source code
+var cns;
 function setup() {
     tr_var_changed();
     w = windowWidth - 10;
     h = windowHeight - 150;
-    var cns = createCanvas(w, h);
+    cns = createCanvas(w, h);
     cns.parent('canvas_holder')
     
-    background(0); //черный фон
-    noStroke(); // убираю оконтовку у кругов
+    background(0); 
+    noStroke(); 
     colors = [color('red'), color('magenta'), color('lime'), color('SlateBlue'), color('Orchid'), color('yellow'), color('CornflowerBlue'), color('orange'), color('GreenYellow'), color('LightSeaGreen '), color('Plum')]
 }
 
@@ -16,7 +17,7 @@ var w;
 var h;
 var colors = [];
 
-function draw() //всё что дальше происходит каждый кадр
+function draw() 
 {
     let alpha = parseInt(tr_par2);
     background(color(0, 0, 0, alpha));
@@ -54,6 +55,23 @@ function tr_var_changed() {
     document.getElementById("track3").value = tr_par3;
 
     ch1 = document.getElementById("ch1").checked;
+}
+
+var on = true;
+function btn_pause() {
+    console.log(on);
+    if (on) {
+        on = false;
+        frameRate(0);
+    }
+    else {
+        on = true;
+        frameRate(60);
+    }
+}
+
+function btn_save() {
+    saveCanvas(cns, 'myCanvas.jpg');
 }
 
 
