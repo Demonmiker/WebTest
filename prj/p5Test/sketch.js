@@ -1,5 +1,6 @@
 // JavaScript source code
 function setup() {
+    tr_var_changed();
     w = windowWidth - 10;
     h = windowHeight - 150;
     var cns = createCanvas(w, h);
@@ -17,11 +18,12 @@ var colors = [];
 
 function draw() //всё что дальше происходит каждый кадр
 {
-    background(color(0, 0, 0, 10));
+    let alpha = parseInt(tr_par2);
+    background(color(0, 0, 0, alpha));
     if (mouseIsPressed) {
         x = mouseX;
         y = mouseY;
-        for (let i = 0; i < document.getElementById("tr_par").value;i++)
+        for (let i = 0; i < tr_par;i++)
             particles.push(new Particle(mouseX, mouseY));
     }
     for (let i = 0; i < particles.length; i++) {
@@ -40,9 +42,12 @@ function draw() //всё что дальше происходит каждый кадр
    
 
 var tr_par;
+var tr_par2;
 function tr_var_changed() {
     tr_par = document.getElementById("tr_par").value;
     document.getElementById("track").value = tr_par;
+    tr_par2 = document.getElementById("tr_par2").value;
+    document.getElementById("track2").value = tr_par2;
 }
 
 
