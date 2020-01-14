@@ -64,6 +64,12 @@ function getResults(error, results) {
 
 }
 
+function disable(button) {
+    btn = document.getElementById(button);
+    btn.onclick = "";
+    btn.style.backgroundColor = 'gray';
+}
+
 
 function btn_blue() {
     curColor = 'blue';
@@ -78,6 +84,7 @@ function btn_yellow(){
 }
 
 function btn_train() {
+    disable("btn_1"); disable("btn_2"); disable("btn_3"); disable("btn_train");
     state = 1;
     model.normalizeData();
     btn_t.disable = true;
