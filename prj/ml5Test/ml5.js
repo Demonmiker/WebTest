@@ -21,6 +21,7 @@ function setup() {
     //
     noStroke();
     background('DarkGreen'); 
+    frameRate(30);
     //
     let options = {
         inputs: ['x', 'y'],
@@ -84,6 +85,7 @@ function btn_yellow(){
 
 function btn_train() {
     disable("btn_1"); disable("btn_2"); disable("btn_3"); disable("btn_train");
+    background('DarkGreen'); 
     state = 1;
     model.normalizeData();
     btn_t.disable = true;
