@@ -31,29 +31,28 @@ function setup() {
     model = ml5.neuralNetwork(options);
 }
 
-function draW() {
-
-}
-
-function mousePressed() {
-    let inputs = {
-        x: mouseX,
-        y: mouseY
-    }
-    if (state == 0) {
-      
-        let target = {
-            color: curColor
+function draw() {
+    if (mouseIsPressed) {
+        let inputs = {
+            x: mouseX,
+            y: mouseY
         }
-        model.addData(inputs, target);
-        fill(color(curColor));
-        ellipse(mouseX, mouseY, 25);
+        if (state == 0) {
+
+            let target = {
+                color: curColor
+            }
+            model.addData(inputs, target);
+            fill(color(curColor));
+            ellipse(mouseX, mouseY, 25);
+        }
+        else if (state == 2) {
+            model.classify(inputs, getResults);
+        }
     }
-    else if (state == 2) {
-        model.classify(inputs, getResults);
-    }
-    
 }
+
+
 
 function getResults(error, results) {
     if (error) { console.log(error); return; }
