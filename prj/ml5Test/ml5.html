@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="../../css/MainStyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+    <script src="ml5.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.2/dist/ml5.min.js"></script>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body style="background-color:dimgray">
+    <div id="canvas_holder" class="c"> </div>
+    <hr />
+    <div class="flex-row" style="height:100%">
+        <input type="button" value="Синий" class="button" style="width:20%; height:100px; margin-right:20px" onclick="btn_blue()" />
+        <input type="button" value="Красный" class="button" style="width:20%; height:100px; margin-right:20px" onclick="btn_red()" />
+        <input type="button" value="Желтый" class="button" style="width:20%; height:100px; margin-right:20px" onclick="btn_yellow()" />
+        <input type="button" id="btn_train" value="Тренировать" class="button" style="width:20%; height:100px; margin-right:20px" onclick="btn_train()" />
+    </div>
+
+</body>
+</html>

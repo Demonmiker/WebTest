@@ -5,7 +5,7 @@ function setup() {
     w = windowWidth - 10;
     h = windowHeight - 170;
     cns = createCanvas(w, h);
-    cns.parent('canvas_holder')
+    cns.parent('canvas_holder');
     
     background(0); 
     noStroke(); 

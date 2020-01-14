@@ -19,4 +19,91 @@
 		font-size: 4vw;
 	}
 }
+
+.c {
+	margin: 0;
+	display: flex;
+	/* This centers our sketch horizontally. */
+	justify-content: center;
+	/* This centers our sketch vertically. */
+	align-items: center;
+}
+
+
+.red {
+	background-color: red;
+}
+
+.flex-col {
+	/*генерирует flex-контейнер уровня блока*/
+	display: flex;
+	flex-direction: column;
+	width: 20%;
+}
+
+.flex-row {
+	/*генерирует flex-контейнер уровня блока*/
+	display: flex;
+	flex-direction: row;
+}
+
+
+.track-value {
+	margin-top: 0;
+	align-self: center;
+	font-size: 1.5vw;
+}
+
+.track-des {
+	color: red;
+}
+
+.slider {
+	-webkit-appearance: none; /* Override default CSS styles */
+	appearance: none;
+	width: 90%; /* Full-width */
+	height: 25px; /* Specified height */
+	background: #d3d3d3; /* Grey background */
+	outline: none; /* Remove outline */
+	opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+	-webkit-transition: .2s; /* 0.2 seconds transition on hover */
+	transition: opacity .2s;
+}
+
+	.slider:hover {
+		opacity: 1; /* Fully shown on mouse-over */
+	}
+
+.button {
+	width: 90%;
+	height: 90%;
+	background-color: DarkSlateBlue; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none; /* Override default look */
+	appearance: none;
+	width: 25px; /* Set a specific slider handle width */
+	height: 25px; /* Slider handle height */
+	background: #4CAF50; /* Green background */
+	cursor: pointer; /* Cursor on hover */
+}
+
+
+
+
+.slider::-moz-range-thumb {
+	width: 25px; /* Set a specific slider handle width */
+	height: 25px; /* Slider handle height */
+	background: DarkSlateBlue;
+	cursor: pointer; /* Cursor on hover */
+}
+
 	
