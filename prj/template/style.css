@@ -35,3 +35,63 @@
 	width: 80%;
 	height: 18%;
 }
+
+@media (orientation: landscape) {
+	.C-Right {
+		right: 0px;
+		top: 0px;
+	}
+
+
+
+	.C-Left {
+		left: 0px;
+		top: 0px;
+	}
+
+	.C-Top {
+		left: 10%;
+		top: 0px;
+		width: 80%;
+		height: 18%;
+	}
+
+	.C-Bottom {
+		left: 10%;
+		bottom: 0px;
+		width: 80%;
+		height: 18%;
+	}
+}
+
+@media (orientation: portrait) {
+	.C-Right {
+		right: 0px;
+		top: 10%;
+		height:80%;
+		width:18%
+	}
+
+
+
+	.C-Left {
+		left: 0px;
+		top: 10%;
+		height: 80%;
+		width: 18%
+	}
+
+	.C-Top {
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 10%;
+	}
+
+	.C-Bottom {
+		left: 0px;
+		bottom: 0px;
+		width: 100%;
+		height: 10%;
+	}
+}

@@ -1,6 +1,7 @@
 // JavaScript source code
 function setup() {
-    createCanvas(windowWidth*0.99, windowHeight*0.97);
+    cnv = createCanvas(windowWidth , windowHeight);
+    //cnv.position(0,0);
     background(50);
 }
 
