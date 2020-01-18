@@ -24,3 +24,9 @@ function createSideButtons()
 
     //console.log(document.body.childNodes);
 }
+
+function onMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent);
+}
+
+

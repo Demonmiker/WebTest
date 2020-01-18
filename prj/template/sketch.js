@@ -3,7 +3,7 @@ function setup() {
     cnv = createCanvas(windowWidth , windowHeight);
     cnv.position(0,0);
     background(50);
-    createSideButtons();
+    if(onMobile()) createSideButtons();
 }
 
 function draw() {
